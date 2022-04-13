@@ -1,5 +1,10 @@
 <?php 
   
+if (!defined('MODX_BASE_PATH')) {
+    die('What are you doing? Get out of here!');
+}
+
+
 require_once(MODX_BASE_PATH."assets/plugins/grapes/grapes.class.php");  
 $grapes = new Grapes($options);
 
@@ -19,6 +24,9 @@ switch ($e->name) {
 
     case "OnPageNotFound":
       if (strpos($_GET['q'], 'grapesEditor') === 0) {
+        if (empty($_SESSION['mgrInternalKey'])) {
+            die('What are you doing? Get out of here!');
+        }
         echo $grapes->ajax();
         die();
       }
