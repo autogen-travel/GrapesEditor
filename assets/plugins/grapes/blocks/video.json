@@ -1,0 +1,18 @@
+{
+	"id":"video",
+	"protected": true,
+	"category": "Основные",
+	"media": "<i class=\"fa fa-youtube-play\"></i>",
+	"content": {
+		"type": "video", 
+		"src": "",
+		"videoId": "jNQXAC9IVRw",
+		"provider": "yt",
+		"style": { 
+			"height": "350px", 
+			"width": "615px", 
+			"margin": "0 auto" 
+		} 
+	},
+	"label":"Видео"
+}

@@ -1,0 +1,8 @@
+{
+	"id": "text",
+	"label": "Текст",
+	"category": "Основные",
+	"protected": true,
+	"content": "<p data-gjs-type=\"text\">Напишите здесь свой текст</p>",
+	"media": "<i class=\"fa fa-file-text-o\"></i>"
+}

@@ -1,0 +1,13 @@
+{
+	"id":"image",
+	"label":"Фото",
+	"category": "Основные",
+	"protected": true,
+	"media": "<i class=\"fa fa-picture-o\"></i>",
+	"content": {
+		"type": "image",
+		"resizable": false,
+		"activeOnRender": false,
+		"style": { "width": "250px", "height": "auto", "object-fit": "cover", "object-position": "center" }
+	}
+}

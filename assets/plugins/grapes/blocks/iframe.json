@@ -1,0 +1,17 @@
+{
+	"id":"iframe",
+	"label":"iFrame",
+	"category": "Основные",
+	"protected": true,
+	"media": "<i class=\"fa fa-object-group\"></i>",
+	"content": {
+		"tagName": "iframe",
+		"type": "iframe", 
+		"src": "https://google.com", 
+		"style": { 
+			"height": "350px", 
+			"width": "615px", 
+			"margin": "0 auto" 
+		} 
+	}
+}
