@@ -38,7 +38,7 @@ switch ($e->name) {
             foreach($images[0] as $i=>$img_tag) {
                 $original_image = $images[1][$i];
 
-                $img_tag_replace = str_replace($images[1][$i], $modx->runSnippet('phpthumb', ['input'=>$images[1][$i], 'options'=>$images[2][$i]]), $img_tag);
+                $img_tag_replace = str_replace($images[1][$i], $modx->runSnippet('phpthumb', ['input'=>$images[1][$i], 'options'=>$images[2][$i].',zc=1']), $img_tag);
                 if(preg_match("#grapes-fancybox#", $img_tag_replace)) {
                     $img_tag_replace = str_replace('grapes-fancybox', 'role="button" data-src="'.$original_image.'" data-fancybox="grapes"', $img_tag_replace);
                 }
