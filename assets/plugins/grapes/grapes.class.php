@@ -111,11 +111,8 @@
       }
 
       if(isset($postData['action']) && $postData['action'] == 'deleteCustomBlock') {
-        if(!isset($postData['blockid']) || !file_exists(MODX_BASE_PATH . 'assets/plugins/grapes/blocks/'.$postData['blockid'].'.json')) {
-          return json_encode(['error'=>'file_not_found']);
-        }
         unlink(MODX_BASE_PATH . 'assets/plugins/grapes/blocks/'.$postData['blockid'].'.json');
-        return json_encode(['id'=>$id]);
+        return json_encode(['id'=>$postData['blockid']]);
       }
     }
   }
