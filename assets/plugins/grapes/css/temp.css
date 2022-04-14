@@ -328,20 +328,22 @@ button, select {
 .gjs-am-asset {
 	width: 25%;
 }
+.gjs-am-preview {
+    background-size: contain;
+}
 .gjs-am-preview-cont {
 	width: 100%;
+    background-color: #f3f3f3;
 }
 
 .grapes-main {
 	height: 100%;
     min-height: 500px;
-    position: relative;
-
-    
+    position: relative; 
 }
 
 .grapes-main.fullscreen {
-        z-index: 9999;
+    z-index: 9999;
     object-fit: contain;
     position: fixed !important;
     top: 0px !important;
