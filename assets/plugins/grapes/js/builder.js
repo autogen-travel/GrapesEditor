@@ -536,7 +536,7 @@ function renderEditor(container, grapesBaseConfig, textarea) {
 		    	let output = editor.getHtml()
 		    	output = output.replace(/<body/g, '<div class="grapesBody"')
 		    	output = output.replace(/body>/g, 'div>')
-		    	output += `<style>${editor.getCss()}</style>`
+		    	output += `<style type="grapes">${editor.getCss()}</style>`
 		    	output = output.replace('body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}', '')
 		    	textarea.value = output
 		    	

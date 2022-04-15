@@ -47,6 +47,20 @@ switch ($e->name) {
             $documentOutput = str_replace($img_tag, $img_tag_replace, $documentOutput);
         }
     }
+    /* styles */
+    preg_match_all('/<style.*?type="grapes">([^>]*)<\/style>/', $documentOutput, $styles);
+    if($styles) {
+        $styles_str = '';
+        foreach($styles[0] as $i=>$style_block) {
+            $styles_str .= str_replace(['* { box-sizing: border-box; }', 'body {margin: 0;}', '*{box-sizing:border-box;}'], '', $styles[1][$i]);
+            $documentOutput = str_replace($styles[0][$i], '', $documentOutput);
+        }
+        if(!empty($styles_str)) {
+            $documentOutput = str_replace('</head>', '<style>'.$styles_str.'</style></head>', $documentOutput);
+        }
+    }
+
+
     $modx->documentOutput = $documentOutput;
         //$e->output($documentOutput);
     break;
